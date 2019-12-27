@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+#par{
+background-color:cyan;
+   height:200;
+   width:200;
+   font-size:28px;
+}
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+ $('#par').mouseenter(function(){
+       $(this).css("background-color","yellow");
+	  });
+	  $('#par').mouseleave(function(){
+       $(this).css("background-color","cyan");
+	  });
+ $("#btn2").bind("click",function(){
+		     v=$("#btn2").clone();
+			 $("#mydiv").prepend(v);
+ });
+  $("#par1").bind("click",function(){
+		     v=$("#par").clone();
+			 $("#mydiv1").prepend(v);
+ });
+ 
+});
+</script>
+</head>
+<body>
+<div id="mydiv1"></div><br>
+<p id="par">This para one for changing the background</p>
+<button id="par1">Add Para</button>
+<div id="mydiv"></div><br>
+<button id="btn2">Add Button</button>
+
+
+</body>
+</html>
